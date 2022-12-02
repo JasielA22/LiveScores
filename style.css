@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Alata', sans-serif
+}
+html{
+    font-size: 15px;
+    font-family: "Alata", Arial, sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: darkblue;
+}
+.navbar-item:hover {
+    background-color: pink;
+    
+}
