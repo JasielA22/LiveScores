@@ -1,3 +1,8 @@
+:root {
+    dark blue - #001328   medium blue - #001F41   lighter blue - #002956  lightest blue (logo) - #003267  teal - #04D3F0
+}
+
+
 * {
     padding: 0;
     margin: 0;
@@ -13,7 +18,7 @@ body{
     width: 100%;
     background-color: darkblue;
 }
-.navbar-item:hover {
-    background-color: pink;
-    
+.navbar-nav>.active>a {
+    background-color: #C0C0C0;
+    color: green;
 }
