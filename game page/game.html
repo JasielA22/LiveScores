@@ -42,10 +42,13 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <p class="today has-background-dark has-text-white is-size-4">
+            <!-- <p class="today has-background-dark has-text-white is-size-4">
               Today's Date
-            </p>
-            <!-- <p id="currentDay" class="today"></p> -->
+            </p> -->
+            <p
+              class="today has-background-dark has-text-white is-size-5"
+              id="currentDay"
+            ></p>
           </div>
         </div>
       </div>
@@ -84,13 +87,6 @@
             </article>
           </div>
         </div>
-        <!-- <div class="tile is-parent">
-          <article class="tile is-child notification is-danger">
-            <p class="title">Wide tile</p>
-            <p class="subtitle">Aligned with the right tile</p>
-            <div class="content"></div>
-          </article>
-        </div> -->
       </div>
       <div class="tile is-parent">
         <article class="tile is-child notification has-background-light">
@@ -113,7 +109,11 @@
         </p>
       </div>
     </footer>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
     <script src="./game.js"></script>
   </body>
 </html>
