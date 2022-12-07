@@ -9,35 +9,52 @@ console.log(now)
 
 
 // Lineups
-const lineups = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'ec19531030msh549c1ba3d1e32c2p1c9159jsnab8641a11590',
-		'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
-	}
-};
-
-fetch('https://livescore6.p.rapidapi.com/matches/v2/get-lineups?Eid=702093&Category=soccer', lineups)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
-    console.log(lineups);
 
 
 
 
 
-    
+
+
 // Scoreboard
-const scoreboard = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'ec19531030msh549c1ba3d1e32c2p1c9159jsnab8641a11590',
-		'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
-	}
-};
+// const options = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': 'ec19531030msh549c1ba3d1e32c2p1c9159jsnab8641a11590',
+// 		'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
+// 	}
+// };
+var score
 
-fetch('https://livescore6.p.rapidapi.com/matches/v2/get-scoreboard?Eid=702093&Category=soccer', scoreboard)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+
+// fetch('https://livescore6.p.rapidapi.com/matches/v2/get-scoreboard?Eid=702093&Category=soccer', options)
+// 	.then(response => response.json())
+// 	.then(response => {
+//         score =response.T1
+//         console.log(score)
+//         for(var i = 0; i < score.length; i++){
+//             scoresEl.textContent = score[0].abr;
+//         }
+//     })
+// 	.catch(err => console.error(err));
+
+
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'ec19531030msh549c1ba3d1e32c2p1c9159jsnab8641a11590',
+            'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
+        }
+    };
+    
+    fetch('https://livescore6.p.rapidapi.com/news/v2/list', options)
+        .then(response => response.json())
+        .then(response => {
+            score =response.topStories
+            console.log(score)
+            for(var i = 0; i < score.length; i++){
+                scoresEl.textContent = score[0].title;
+            }
+        })
+
+        .catch(err => console.error(err));
