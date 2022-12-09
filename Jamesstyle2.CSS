@@ -5,3 +5,30 @@
 }
 
 
+.hero{
+    background-image: url("./assets/images/img_2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:black;
+    /* opacity: .5; */
+}
+
+.navbar{
+    font-size: 2rem;
+    background-image: linear-gradient(150deg,rgb(214, 148, 26),rgb(187, 145, 68),white);
+}
+#sports{
+    margin: 1%;
+    padding:1%;
+    width:100%;
+    font-size: 3rem;
+    font-style: italic;
+    letter-spacing: 1.5;
+   
+}
+.title, .subtitle{
+    color:black;
+}
+.navbar-brand{
+    width: 70%;
+}
