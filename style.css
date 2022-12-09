@@ -1,13 +1,9 @@
-:root {
-    dark blue - #001328   medium blue - #001F41   lighter blue - #002956  lightest blue (logo) - #003267  teal - #04D3F0
-}
-
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Alata', sans-serif
+    font-family: 'Alata', sans-serif;
 }
 html{
     font-size: 15px;
@@ -16,9 +12,11 @@ html{
 body{
     height: 100vh;
     width: 100%;
-    background-color: darkblue;
+    background-color: #001F41;
 }
-.navbar-nav>.active>a {
-    background-color: #C0C0C0;
-    color: green;
+.change-color {
+    color: white;
+}
+.is-parent {
+    color: white;
 }
