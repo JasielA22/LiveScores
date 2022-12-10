@@ -1,60 +1,44 @@
-const scoresEl = document.getElementById("scores");
-const matchEl = document.getElementById("match");
+const homeTEl = document.getElementById("team1");
+const visitTEl = document.getElementById("team2");
 const lineupsEl = document.getElementById("lineups");
 const highlightsEl = document.getElementById("highlights")
-
+var subsArray = []
 var now = dayjs().format("dddd, MMMM D, YYYY h:mm A")
   $("#currentDay").text(now)
 console.log(now)
 
+// Match Info 
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'ec19531030msh549c1ba3d1e32c2p1c9159jsnab8641a11590',
+		'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
+	}
+};
 
-// Lineups
-
-
-
-
-
-
-
-// Scoreboard
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': 'ec19531030msh549c1ba3d1e32c2p1c9159jsnab8641a11590',
-// 		'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
-// 	}
-// };
-var score
+var teamsData;
+var teamInfo1;
+var teamInfo2;
 
 
-// fetch('https://livescore6.p.rapidapi.com/matches/v2/get-scoreboard?Eid=702093&Category=soccer', options)
-// 	.then(response => response.json())
-// 	.then(response => {
-//         score =response.T1
-//         console.log(score)
-//         for(var i = 0; i < score.length; i++){
-//             scoresEl.textContent = score[0].abr;
-//         }
-//     })
-// 	.catch(err => console.error(err));
+fetch('https://livescore6.p.rapidapi.com/matches/v2/list-by-date?Category=soccer&Date=20221210&Timezone=-7', options)
+	.then(response => response.json())
+	.then(response => {
+   teamsData = response.Stages[0]
+    teamInfo1 = teamsData.Events[0].T1[0]
+    teamInfo2 = teamsData.Events[0].T2[0]
+    console.log(teamInfo1)
+    console.log(teamInfo2)
+    console.log(response)
 
+    homeTEl.textContent = teamInfo1;
+    visitTEl.textContent = teamInfo2;
+    for (var i = 0; i < teamsData.length; i++){
+      // homeTEl.textContent = teamInfo1;
+      // visitTEl.textContent = teamInfo2;
+    }
 
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': 'ec19531030msh549c1ba3d1e32c2p1c9159jsnab8641a11590',
-            'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
-        }
-    };
-    
-    fetch('https://livescore6.p.rapidapi.com/news/v2/list', options)
-        .then(response => response.json())
-        .then(response => {
-            score =response.topStories
-            console.log(score)
-            for(var i = 0; i < score.length; i++){
-                scoresEl.textContent = score[0].title;
-            }
-        })
-
-        .catch(err => console.error(err));
+  })
+	.catch(err => console.error(err));
+  
+ 
