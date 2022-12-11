@@ -1,8 +1,12 @@
 const homeTEl = document.getElementById("team1");
 const h1ImgEl = document.getElementById("img1");
 const visitTEl = document.getElementById("team2");
-const lineupsEl = document.getElementById("lineups");
-const highlightsEl = document.getElementById("highlights")
+const scoreEl = document.getElementById("score");
+const highlightsEl = document.getElementById("highlights");
+const scoreHEl = document.getElementById("scoreH");
+const scoreAEl = document.getElementById("scoreA");
+const logoHEl = document.getElementsByClassName("logoH");
+const logoAE1 = document.getElementsByClassName("logoA");
 var subsArray = []
 var now = dayjs().format("dddd, MMMM D, YYYY h:mm A")
   $("#currentDay").text(now)
@@ -57,9 +61,10 @@ headers: {
 }
 })
 .then(response => response.json().then(data => {
-  var teamsHigh1 =data[7]["videos"][0]["embed"];
+  var teamsHigh1 =data[11]["videos"][0]["embed"];
 
   console.log(teamsHigh1);
+  console.log(data)
 
   highlightsEl.innerHTML = teamsHigh1;
 
@@ -69,3 +74,29 @@ headers: {
 
 }
 getAllData();
+
+function getscoreData () {
+  fetch('https://football98.p.rapidapi.com/fifaworldcup/results',{
+method: 'GET',
+headers: {
+  'X-RapidAPI-Key': 'ec19531030msh549c1ba3d1e32c2p1c9159jsnab8641a11590',
+  'X-RapidAPI-Host': 'football98.p.rapidapi.com'}
+})
+  .then(response => response.json().then(data =>{
+          var scoreDay = data[0][" Quarter-finals "
+      ][0];
+      var homeT1 =scoreDay["homeTeamScore"]
+      var awayT1 =scoreDay["awayTeamScore"]
+      var homeLogo =scoreDay["homeLogo"]
+      var awayLogo =scoreDay["awayLogo"]
+      console.log(logoAE1);
+      console.log(logoHEl);
+      console.log(scoreDay);
+      scoreHEl.textContent ="England: " + homeT1;
+      scoreAEl.textContent = "France: " + awayT1;
+      logoHEl.innerHTML = homeLogo;
+      logoAE1.innerHTML = awayLogo;
+  }))
+  .catch(err => console.error(err));
+}
+getscoreData ();
