@@ -10,3 +10,7 @@ body{
     font-family: 'Markazi Text', serif;
 
 }
+
+.notification:hover{
+    background-image: linear-gradient(rgb(20, 20, 154),grey,white);
+}

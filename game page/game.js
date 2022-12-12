@@ -7,6 +7,7 @@ const scoreHEl = document.getElementById("scoreH");
 const scoreAEl = document.getElementById("scoreA");
 const logoHEl = document.getElementsByClassName("logoH");
 const logoAE1 = document.getElementsByClassName("logoA");
+const prevEl = document.getElementById("previous");
 var subsArray = []
 var now = dayjs().format("dddd, MMMM D, YYYY h:mm A")
   $("#currentDay").text(now)
@@ -60,13 +61,18 @@ headers: {
   'X-RapidAPI-Host': 'free-football-soccer-videos.p.rapidapi.com'
 }
 })
+// update data[#] on teamsHigh
 .then(response => response.json().then(data => {
-  var teamsHigh1 =data[11]["videos"][0]["embed"];
-
+  var teamsHigh1 =data[33]["videos"][0]["embed"];
+  var previousEl =data[34]["videos"][0]["embed"];
+  var play = data;
+  console.log(play);
   console.log(teamsHigh1);
-  console.log(data)
+  console.log(previousEl);
+ 
 
   highlightsEl.innerHTML = teamsHigh1;
+  prevEl.innerHTML = previousEl;
 
 }))
 
