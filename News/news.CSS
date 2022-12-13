@@ -49,14 +49,27 @@ body {
              33px 33px 40px #00254d;*/
 }
 
-/*button {
-display: flex;
-align-items: flex-end;
+.btn {
+  position: fixed;
+  top: 60px;
+  right: 200px;
+  font-size: x-large;
+  border-radius: 25px;
+  border: none;
+  margin: auto;
+  padding: 25px;
+  background-color: var(--medium-blue); 
+  color: darkcyan;
+  font-weight: bold;
+  box-shadow:  -33px -33px 40px #001935,
+  33px 33px 40px #00254d; 
 }
-
-button:hover {
-    cursor: pointer;
-}*/
+.btn {
+cursor: pointer;
+}
+.btn:active {
+  transform: translateY(4px);
+}
 
 .line {
   margin: 0 px;
