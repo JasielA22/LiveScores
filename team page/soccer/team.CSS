@@ -33,7 +33,7 @@ html {
     color: #fff;
   }
   
-  .card1 {
+  .card {
     flex: 1 0 0;
     padding: 10px;
     text-align: center;
@@ -43,39 +43,7 @@ html {
     color: #fff;
   }
   
-  .card1 header {
-    padding: 20px;
-    background: #13293d;
-    color: #fff;
-  }
-
-  .card2 {
-    flex: 1 0 0;
-    padding: 10px;
-    text-align: center;
-    border-style: solid;
-    border-width: 1px;
-    background-color: #035e7c;
-    color: #fff;
-  }
-  
-  .card2 header {
-    padding: 20px;
-    background: #13293d;
-    color: #fff;
-
-
-  }.card3 {
-    flex: 1 0 0;
-    padding: 10px;
-    text-align: center;
-    border-style: solid;
-    border-width: 1px;
-    background-color: #035e7c;
-    color: #fff;
-  }
-  
-  .card3 header {
+  .card header {
     padding: 20px;
     background: #13293d;
     color: #fff;
