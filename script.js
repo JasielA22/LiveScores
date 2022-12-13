@@ -17,7 +17,7 @@ const score4 = document.getElementById("score4");
 let options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "9636731d66msh6b44fd43f272bfap1a4b34jsn8b8f34029b9f",
+    "X-RapidAPI-Key": "d76ba585dcmsh140a4091c8d0b0ep10ffa4jsn6690ba824e8d",
     "X-RapidAPI-Host": "livescore6.p.rapidapi.com",
   },
 };
