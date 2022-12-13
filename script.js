@@ -35,7 +35,7 @@ var changingVar = 0;
 
 //window.location.refresh
 fetch(
-  "https://livescore6.p.rapidapi.com/matches/v2/list-by-date?Category=soccer&Date=" + "20221213" + "&Timezone=-6",
+  "https://livescore6.p.rapidapi.com/matches/v2/list-by-date?Category=soccer&Date=" + "20221210" + "&Timezone=-6",
   options
 )
   .then((response) => response.json())
@@ -44,7 +44,6 @@ fetch(
     Data2 = response.Stages[0].Events[0].T2[0];
     scoreData1 = response.Stages[0].Events[0];
     scoreData2 = response.Stages[0].Events[0];
-
 
     Data3 = response.Stages[changingVar].Events[1].T1[0];
     Data4 = response.Stages[changingVar].Events[1].T2[0];
