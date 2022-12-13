@@ -63,8 +63,8 @@ headers: {
 })
 // update data[#] on teamsHigh
 .then(response => response.json().then(data => {
-  var teamsHigh1 =data[33]["videos"][0]["embed"];
-  var previousEl =data[34]["videos"][0]["embed"];
+  var teamsHigh1 =data[34]["videos"][0]["embed"];
+  var previousEl =data[35]["videos"][0]["embed"];
   var play = data;
   console.log(play);
   console.log(teamsHigh1);
