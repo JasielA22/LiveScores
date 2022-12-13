@@ -29,7 +29,7 @@ fetch("https://livescore6.p.rapidapi.com/news/v2/list/", options)
     link04 = allMyData[3].url;
     link05 = allMyData[4].url;
     link06 = allMyData[5].url;
-	link07 = allMyData[6].url;
+    link07 = allMyData[6].url;
     link08 = allMyData[7].url;
     link09 = allMyData[8].url;
     link010 = allMyData[9].url;
@@ -43,7 +43,7 @@ fetch("https://livescore6.p.rapidapi.com/news/v2/list/", options)
       box4El.textContent = allMyData[3].title;
       box5El.textContent = allMyData[4].title;
       box6El.textContent = allMyData[5].title;
-	  box7El.textContent = allMyData[6].title;
+      box7El.textContent = allMyData[6].title;
       box8El.textContent = allMyData[7].title;
       box9El.textContent = allMyData[8].title;
       box10El.textContent = allMyData[9].title;
@@ -55,7 +55,7 @@ fetch("https://livescore6.p.rapidapi.com/news/v2/list/", options)
       var link040 = "https://livescore.com" + link04;
       var link050 = "https://livescore.com" + link05;
       var link060 = "https://livescore.com" + link06;
-	  var link070 = "https://livescore.com" + link07;
+      var link070 = "https://livescore.com" + link07;
       var link080 = "https://livescore.com" + link08;
       var link090 = "https://livescore.com" + link09;
       var link0100 = "https://livescore.com" + link010;
@@ -67,7 +67,7 @@ fetch("https://livescore6.p.rapidapi.com/news/v2/list/", options)
       link4El.setAttribute("href", link040);
       link5El.setAttribute("href", link050);
       link6El.setAttribute("href", link060);
-	  link7El.setAttribute("href", link070);
+      link7El.setAttribute("href", link070);
       link8El.setAttribute("href", link080);
       link9El.setAttribute("href", link090);
       link10El.setAttribute("href", link0100);
