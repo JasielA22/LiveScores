@@ -19,7 +19,7 @@
         </a>
       </div>
       <div class="navbar-start navbar-item">
-        <a class="navbar-item has-text-white "><strong>News</strong></a>
+        <a class="navbar-item has-text-white" href="./News/news.html"><strong>News</strong></a>
       </div>
 
       <div class="dropdown is-hoverable">
@@ -35,7 +35,7 @@
           <div class="dropdown-content">
             <div class="dropdown-item">
               <ul>
-                <li><a src="">Futball</a></li>
+                <li><a href="./team page/soccer/team.html">Soccer</a></li>
                 <li><a src="">Basketball</a></li>
                 <li><a src="">Futbol</a></li>
                 <li><a src="">Hockey</a></li>
@@ -47,7 +47,7 @@
      </div>
     </nav>
     <!-- Start of the body-->
-    <section class="hero">
+    <!-- <section class="hero">
       <div class="hero-body">
         <p class="title has-text-white">
           Futbol <br> Select a Date:
@@ -66,7 +66,36 @@
               <img id="team1" src="">
             </figure>
             <div class="content">
-              <span id="par1"></span>
+              <span id="par1" class="is-size-3"></span>
+            </div>
+          </div>
+        </article>
+      </div>
+      
+      <div class="tile is-parent border-right">
+        <article class="tile is-child-box">
+          <div class="content">
+            <p class="title change-color" id="title2" ></p>
+            <figure class="image is-64x64">
+              <img id="team2" src="">
+            </figure>
+            <div class="content">
+              <span id="par2" class="is-size-3"></span>
+            </div>
+          </div>
+        </article>
+      </div> 
+
+      Other match
+      <div class="tile is-parent">
+        <article class="tile is-child-box">
+          <div class="content">
+            <p class="title change-color" id="title3"></p>
+            <figure class="image is-64x64">
+              <img id="team3" src="">
+            </figure>
+            <div class="content">
+              <span id="par3" class="is-size-3"></span>
             </div>
           </div>
         </article>
@@ -75,18 +104,67 @@
       <div class="tile is-parent">
         <article class="tile is-child-box">
           <div class="content">
-            <p class="title change-color" id="title2" ></p>
+            <p class="title change-color" id="title4" ></p>
             <figure class="image is-64x64">
-              <img id="team2" src="">
+              <img id="team4" src="">
             </figure>
             <div class="content">
-              <span id="par2"></span>
+              <span id="par4" class="is-size-3" ></span>
             </div>
           </div>
         </article>
       </div>
+    -->
 
 
+    <!-- Changed to Columns on Bulma, start of body-->
+    <section class="hero">
+      <div class="hero-body">
+        <p class="title has-text-white">
+          Futbol <br> Select a Date:
+        </p>
+        <p class="subtitle">
+          <p class="has-text-white">Date: <input type="text" id="datepicker"></p>
+        </p>
+      </div>
+    </section>
+
+    <div class="columns">
+      <div class="column">
+        <p class="title change-color" id="title1"></p>
+        <figure class="image is-64x64">
+          <img id="team1" src="">
+        </figure>
+        <span id="score1" class="is-size-2 has-text-white"></span>
+      </div>
+
+      <div class="column">
+        <p class="title change-color" id="title2" ></p>
+        <figure class="image is-64x64">
+          <img id="team2" src="">
+        </figure>
+        <span id="score2" class="is-size-2 has-text-white"></span>
+        </div>
+
+      <div class="column">
+      </div>
+
+      <div class="column">
+        <p class="title change-color" id="title3"></p>
+        <figure class="image is-64x64">
+          <img id="team3" src="">
+        </figure>
+        <span id="score3" class="is-size-2 has-text-white"></span>
+      </div>
+
+      <div class="column">
+        <p class="title change-color" id="title4" ></p>
+        <figure class="image is-64x64">
+          <img id="team4" src="">
+        </figure>
+        <span id="score4" class="is-size-2 has-text-white" ></span>
+      </div>
+    </div>
 
 
 
