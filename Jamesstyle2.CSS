@@ -1,5 +1,5 @@
 .background {
-    background-color: blue;
+    background-image: linear-gradient(270deg,orange,grey,black,orange);
     font: size 24px;
     color: whitesmoke;    
 }
@@ -31,4 +31,37 @@
 }
 .navbar-brand{
     width: 70%;
+}
+
+.title{
+    color:rgb(194, 75, 20);
+    font-size: 2.5rem;
+}
+
+.subtitle{
+    color:rgb(216, 17, 27);
+    font-size: 1.5rem;
+}
+
+.columns{
+    margin: 2%;
+    padding: 2%;
+    /* flex-wrap: wrap;
+    justify-content: space-evenly; */
+}
+
+/* .column{
+    margin: 1%;
+    padding: 1%;
+} */
+
+.sport-news{
+    letter-spacing: 2px;
+    line-height: 2;
+    font-size: 1.5rem;
+}
+.section-title{
+    letter-spacing: 3px;
+    font-size: 2rem;
+    font-style: italic;
 }
